@@ -99,7 +99,7 @@ border-radius: 25px;
     height:400px;
     margin-left: 30%;
     margin-top: 15%;
-  
+    box-shadow: 2px 2px 50px #000;
     align-items: center;
     border-radius: 40px;
 }

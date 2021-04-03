@@ -9,6 +9,18 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>E-Charging:Locate E-Station Near You</title>
+  <script>
+    function showPosition() {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                document.getElementById("result").innerHTML = positionInfo;
+            });
+        } else {
+            alert("Sorry, your browser does not support HTML5 geolocation.");
+        }
+    }
+</script>
 </head>
 
 <body>
@@ -18,9 +30,9 @@
       <img src="android-chrome-512x512.png" id="img1">
       <h1 id="h12">E-CHARGING STATION FINDER</h1>
       <ul id="ul1">
-        <li><a href="#" class="a1">Home</a></li>
-        <li><a href="#" class="a1">Add Station</a></li>
-        <li><a href="#" class="a1">Contact Us</a></li>
+        <li><a href="index.html" class="a1">Home</a></li>
+        <li><a href="addstation.html" class="a1">Add Station</a></li>
+        <li><a href="contactus.html" class="a1">Contact Us</a></li>
       </ul>
   </header>
   <main id="id1"><div id="div2">
@@ -28,6 +40,10 @@
     <div id="div1">
      <a href="#" id="a2"> <i class="fa fa-search" aria-hidden="true" id="i12"></i></a>
       <input type="search" placeholder="Search For Station" id="search1">
+      <div id="result">
+        <!--Position information will be inserted here-->
+    </div>
+    <button type="button" onclick="showPosition();">Show Position</button>
     </div></div>
   </main>
   <div id="div12">

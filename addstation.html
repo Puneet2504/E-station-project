@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showPosition() {
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                    document.getElementById("result").innerHTML = positionInfo;
+                });
+            } else {
+                alert("Sorry, your browser does not support HTML5 geolocation.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>NEW STATION</header>
+    <main>
+        <p>Location</p>
+        <input placeholder="location" type="text">
+        <button type="submit">Submit</button>
+        <p>OR</p>
+        <div id="result">
+            <!--Position information will be inserted here-->
+        </div>
+        <button type="button" onclick="showPosition();">Show Position</button>
+        
+    </main>
+    
+</body>
+</html>

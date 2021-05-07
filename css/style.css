@@ -14,10 +14,11 @@
     padding: 15px;
     margin-top: 35px;
     margin-right: 10px;   
+
 }
 #ul1 li a:hover{
-    background-color: rgb(130, 255, 172); 
-    color:rgb(253, 255, 255);
+    background-color: rgb(253, 255, 255); 
+    color:rgb(130, 255, 172); 
     
 }
 #ul1 li{
@@ -28,6 +29,8 @@
     padding: 5px 20px;
     border: 1px solid transparent;
    transition: 0.6s ease;
+   color:rgb(253, 255, 255);
+   font-size: 20px;
 }
 
 #img1{
@@ -121,5 +124,8 @@ border-radius: 25px;
     margin-right:15%;
     margin-top: -39%;
     font-family: french script Mt;
+}
+#location{
+    background-color: rgba(255, 255, 255, 0.11);
 }
 
